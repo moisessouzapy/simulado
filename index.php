@@ -22,18 +22,18 @@
                     <input style="-webkit-text-security: square;" type="password" class="flex items-center border-b border-teal-500 py-2 w-screen text-[#35797d]">
                 </div>
                 <div class="grid grid-cols-3 grid-rows-4 gap-2 mt-8 justify-items-center px-26">
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">1</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">2</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">3</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">4</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">5</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">6</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">7</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">8</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">9</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">C</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">0</div>
-                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center">ENTER</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">1</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">2</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">3</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">4</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">5</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">6</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">7</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">8</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">9</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">C</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">0</div>
+                    <div class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">ENTER</div>
                 </div>  
             </div>
         </div>
