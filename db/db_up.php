@@ -45,5 +45,5 @@ else
         echo "\nequipamentos inseridos\n"; 
     else 
         echo "\nErro ao inserir\n"; 
-    
-?>
+
+    ?>

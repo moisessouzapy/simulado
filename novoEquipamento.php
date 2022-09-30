@@ -44,7 +44,10 @@ $comentarios = $bd1->query($sql1);
             <a><?php echo $equipamento["titulo"] ?></a>
             <p><?php echo $equipamento["descricao"] ?></p>
             <img class="icon"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModa2" src="../img/comentario.png" alt="comentar">
-            <img class="icon"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModa3" src="../img/deletar.png" alt="deletar">
+            <img class="icon" type="button" data-bs-toggle="modal" data-bs-target="#exampleModa3"  
+            data-id-apagar="<?php echo $equipamento["id"]?>" src="../img/deletar.png" alt="deletar"
+            >
+
             <hr style="margin-top: 100px;">
         </div>
         <?php endwhile ?>
@@ -111,26 +114,6 @@ $comentarios = $bd1->query($sql1);
         </div>
     </class>
 
-    <!-- MODEL DELETAR -->
-    <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg black">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Exclusão de equipamento</h5>
-                    <button style="color: #35797D;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <p class="del_desc">Atenção! Tem certeza que deseja excluir o equipamento? Essa ação não poderá ser desfeita.</p>
-                    </div>
-                    <div >
-                       <button class="button1">Excluir</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- MODEL ADICIONAR COMENTARIO -->
     <div class="modal fade" id="exampleModa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -139,7 +122,7 @@ $comentarios = $bd1->query($sql1);
                 <form action="view/cadastrar_comentario.php" method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Cadastro de equipamento</h5>
-                        <button style="color: #35797D;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button style="color: #35797D;" class="btn-clo  aria-label="Close"></button>
                     </div>
                     <div class="name">
                             <input name="titulo_comentario" type="text" placeholder="Cargo" required>
@@ -155,33 +138,83 @@ $comentarios = $bd1->query($sql1);
             </div>
         </div>
     </div>
-    <!-- <div class="modal fade" id="exampleModa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg black">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Cadastro de comentário</h5>
-                    <button style="color: #35797D;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div class="desc1">
-                        <textarea type="text"placeholder="Comentário"></textarea>
+
+
+    <!-- MODEL DELETAR -->
+        <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg black">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Exclusão de equipamento</h5>
+                        <button style="color: #35797D;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div >
-                       <button class="button">Cadastrar</button>
+                    <div class="modal-body">
+                        <div>
+                            <p class="del_desc">Atenção! Tem certeza que deseja excluir o equipamento? Essa ação não poderá ser desfeita.</p>
+                        </div>
+                        <div >
+                        <form id="confirmar-apagar">
+                            <input type="hidden" name="id" value="">
+                            <button style="background-color: red;border-radius: 10px;color: white;padding: 15px 32px;text-align: center;text-decoration: none;margin-top: 50px;font-size: 16px;" type="submit" form="confirmar-apagar" id="confirmar-apagar" class="btn-excluir button1">Excluir</button>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+        
+    </body>
+<!-- Script apagar equipamento -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
-</body>
-
-<script>
-    M.toast({
-        html: '<?echo $_GET['msg'] ?>'
+<!-- <script>
+    document.querySelectorAll(".btn-excluir").forEach(btn=>{
+        btn.addEventListener("click", e=>{
+            const id = btn.getAttribute("data-id")
+            const requestConfig = { method: "DELETE", header: new Headers()}
+            fetch(`/equipamentos/${id}`, requestConfig)
+                .then(response => response.json())
+                .then(response => {
+                    if (response.success ==="ok") {
+                        console.log("apagado com sucesso")
+                    }
+                    
+                })
+        });
     });
+    
+</script>  --> 
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+       
+
+    const exampleModal = document.getElementById('exampleModa3')
+    exampleModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget
+      const recipient = button.getAttribute('data-id-apagar')
+      /* const modalTitle = exampleModal.querySelector('.modal-title')
+    const modalBodyInput = exampleModal.querySelector('.modal-body input')
+  modalTitle.textContent = `New message to ${recipient}`
+  modalBodyInput.value = recipient */
+
+  $("#confirmar-apagar").submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+          url: 'db/delete_table_equipamentos.php',
+          type: 'POST',
+          data: {
+            'id': recipient
+          },}).done(function(result){
+            document.location.reload(false);
+          }).fail(function(result){
+            console.log(result)
+            console.log("erro")
+          })})
+})
 </script>
 
-</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</html> 
