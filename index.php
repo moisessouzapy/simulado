@@ -19,7 +19,7 @@
            
             <div class="p-8 bg-[#eeedeb] ">
                 <div class="flex justify-center">
-                    <input id="resultado" method="POST" class="flex items-center border-b border-teal-500 py-2 w-screen text-[#35797d]" style="outline: none;">
+                    <input id="resultado" type="password" method="POST" class="flex items-center border-b border-teal-500 py-2 w-screen text-[#35797d]" style="outline: none;">
                 </div>
                 <div class="grid grid-cols-3 grid-rows-4 gap-2 mt-8 justify-items-center px-26">
                             <button onclick="insert('1')" class="rounded-full bg-white border-[#35797d] text-[#35797d] hover:bg-[#35797d] hover:text-white border-2 w-16 h-16 flex items-center justify-center" style="cursor:pointer;">1</button>

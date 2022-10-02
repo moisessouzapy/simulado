@@ -122,7 +122,7 @@ $comentarios = $bd1->query($sql1);
                 <form action="view/cadastrar_comentario.php" method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Cadastro de equipamento</h5>
-                        <button style="color: #35797D;" class="btn-clo  aria-label="Close"></button>
+                        <button style="color: #35797D;" class="btn-close"  aria-label="Close"></button>
                     </div>
                     <div class="name">
                             <input name="titulo_comentario" type="text" placeholder="Cargo" required>
@@ -131,7 +131,7 @@ $comentarios = $bd1->query($sql1);
                             <textarea class="desc1" name="comentarios" type="text" placeholder="Comentarios" required></textarea>
                         </div>
                         <div >
-                        <button style="background-color: #35797D;border-radius: 10px;color: white;padding: 15px 32px;text-align: center;text-decoration: none;margin-top: 50px;font-size: 16px;" type="submit" class="button">Cadastrar</button>
+                        <button style="background-color: #35797D;border-radius: 10px;color: white;padding: 15px 32px;text-align: center;text-decoration: none; margin-top: 50px;font-size: 16px;" type="submit" class="button">Cadastrar</button>
                         </div>
                     </form>
                 </div>
@@ -146,7 +146,7 @@ $comentarios = $bd1->query($sql1);
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-xl p-2 text-[#35797d]" id="exampleModalLabel">Exclusão de equipamento</h5>
-                        <button style="color: #35797D;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button style="color: #35797D; " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div>
